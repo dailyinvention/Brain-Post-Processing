@@ -1,6 +1,11 @@
 import http.requests.*;
 
 void setup() {
+  size(200, 200);
+  frameRate(1);
+}
+
+void draw() {
   JSONArray json;
   GetRequest get = new GetRequest("http://192.168.1.118:8080/api/neurobrainget/");
 
