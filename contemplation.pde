@@ -160,11 +160,13 @@ void draw() {
       get.addHeader("Accept", "application/json");
       get.send();
       println(get.getContent());
+      
+      json = parseJSONArray(get.getContent());
   
 if (n < json.size() - 1) { 
    if(n-1 > 0) {
         
-      json = parseJSONArray(get.getContent());
+      
         
       items1 = json.getJSONObject(n); 
       item1 = items1.getJSONObject("obj");
